@@ -1,0 +1,22 @@
+1) pwd
+2) ls, all the tracked files
+3) nano patterns.txt
+4) cat
+5) diff command
+6) mv or cp ~/music/ ~/math/calculus/
+7) rm triangle.txt
+8) cd ../math/
+9) git init
+10) git remote add
+11) cp ~/music/symmetry.txt ~/math/
+12) git status. No because it hasn't been added to the remote repository
+13) git add. git add .
+14) Yes git is currently tracking symmetry.txt. Git reset unstages it
+15) git commit -m "insert message"
+16) git push origin math/ to push to your remote math repository.
+17) git branch applied.math
+18) git checkout applied.math
+19) git add, commit - m, push origin math/. If you switch branches beforehand you're info will be taken out of the staging area
+20) git branch. The branch you are working in will be in green.
+21) git checkout main
+

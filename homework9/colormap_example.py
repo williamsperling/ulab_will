@@ -1,0 +1,32 @@
+import matplotlib.pyplot as plt
+import numpy as np
+from PIL import Image
+def plot_inferno_image(image_path):
+    """
+    Function that takes in an image path and displays the image and its inferno colormap as well as a color bar.
+
+    Inputs:
+    image_path (for example "Mona.jpg")
+    """
+    img = plt.imread(image_path)
+    
+    #If the image is in color (RGB), convert to grayscale
+    if img.ndim == 3:  #Check if the image has 3 channels (RGB)
+        img = np.mean(img, axis=2)  #Convert to grayscale by averaging the RGB channels
+
+    #Create a figure with two subplots side-by-side
+    fig, axes = plt.subplots(1, 2, figsize=(16, 6))
+
+    #Display the grayscale image
+    axes[0].imshow(img, cmap='gray')
+    axes[0].set_title("Grayscale Image", fontsize=14)
+
+    #Display the image with inferno colormap, and its colorbar
+    axes[1].imshow(img, cmap='inferno')
+    axes[1].set_title("Inferno Colormap", fontsize=14)
+    imgplot = plt.imshow(img, cmap='inferno')
+    plt.colorbar(imgplot)
+
+    fig.suptitle("Comparison of Grayscale and Inferno Colormap", fontsize=16)
+    plt.legend
+    plt.show()
